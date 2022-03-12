@@ -13,10 +13,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
     }
 
-    protected void txtNumber_TextChanged(object sender, EventArgs e)
-    {
 
-    }
 
     protected void chkAvailable_CheckedChanged(object sender, EventArgs e)
     {
@@ -26,8 +23,27 @@ public partial class _1_DataEntry : System.Web.UI.Page
     protected void btnOK_Click(object sender, EventArgs e)
     {
         clsStock aStock = new clsStock();
+
+
         aStock.Name = txtName.Text;
         Session["aStock"] = aStock;
         Response.Redirect("RoryViewer.aspx");
+
+        aStock.Price = txtPrice.Text;
+        Session["aStock"] = aStock;
+        Response.Redirect("RoryViewer.aspx");
+
+        aStock.IdNumber = txtIdNumber.Text;
+        Session["aStock"] = aStock;
+        Response.Redirect("RoryViewer.aspx");
+
+        aStock.DateAdded = txtDate.Text;
+        Session["aStock"] = aStock;
+        Response.Redirect("RoryViewer.aspx");
+
+        aStock.Avalible = chkAvailable.Text;
+        Session["aStock"] = aStock;
+        Response.Redirect("RoryViewer.aspx");
+
     }
 }

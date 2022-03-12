@@ -13,5 +13,10 @@ public partial class _1Viewer : System.Web.UI.Page
         clsStock aStock = new clsStock();
         aStock = (clsStock)Session["aStock"];
         Response.Write(aStock.Name);
+        Response.Write(aStock.Price);
+        Response.Write(aStock.IdNumber);
+        Response.Write(aStock.DateAdded);
+        Response.Write(aStock.Avalible);
+
     }
 }
