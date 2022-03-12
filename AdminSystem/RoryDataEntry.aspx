@@ -10,13 +10,13 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:Label ID="lblNumber" runat="server" Text="ID Number " width="60px"></asp:Label>
-        <asp:TextBox ID="txtNumber" runat="server" OnTextChanged="txtNumber_TextChanged"></asp:TextBox>
-        <p>
+        <asp:Label ID="lblIdNumber" runat="server" Text="ID Number " width="60px"></asp:Label>
+        <asp:TextBox ID="txtIdNumber" runat="server" ></asp:TextBox>
+        <p>l
             <asp:Label ID="lblName" runat="server" Text="Name " width="60px"></asp:Label>
             <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
         </p>
-        <asp:Label ID="tblPrice" runat="server" Text="Price " width="60px"></asp:Label>
+        <asp:Label ID="lblPrice" runat="server" Text="Price " width="60px"></asp:Label>
         <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
         <p>
             <asp:Label ID="lblDate" runat="server" Text="Date Added " width="60px"></asp:Label>
