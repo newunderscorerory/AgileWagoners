@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ClassLibrary
 {
     public class clsCustomer
     {
+
         private Int32 mCustomerID;
         private bool mCustomerPaymentReceived;
         public bool CustomerPaymentReceived
@@ -110,6 +112,70 @@ namespace ClassLibrary
             {
                 return false;
             }
+        }
+
+        public string Valid(string address, string name, string email, string dateAdded, string order)
+        {
+            String Error = "";
+            DateTime DateTemp;
+            if (address.Length == 0)
+            {
+                Error = Error + "The Address may not be blank : ";
+            }
+
+            if (address.Length > 50)
+            {
+                Error = Error + "The address must be less than 50 characters : ";
+            }
+
+            try
+            {
+                DateTemp = Convert.ToDateTime(dateAdded);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                Error = Error + "The date was not valid : ";
+            }
+
+            if (name.Length == 0)
+            {
+                Error = Error + "The name may not be blank : ";
+            }
+
+            if (name.Length > 50)
+            {
+                Error = Error + "The name must be less than 50 characters : ";
+            }
+
+            if (order.Length == 0)
+            {
+                Error = Error + "The order may not be blank : ";
+            }
+
+            if (order.Length > 50)
+            {
+                Error = Error + "The order must be less than 50 characters : ";
+            }
+
+            if (email.Length == 0)
+            {
+                Error = Error + "The email may not be blank : ";
+            }
+
+            if (email.Length > 50)
+            {
+                Error = Error + "The email must be less than 50 characters : ";
+            }
+            return Error;
+
         }
     }
 }
