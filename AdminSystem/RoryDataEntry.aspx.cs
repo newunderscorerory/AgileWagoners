@@ -24,7 +24,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
     {
         clsStock aStock = new clsStock();
 
-
+        /*
         aStock.Name = txtName.Text;
         Session["aStock"] = aStock;
         Response.Redirect("RoryViewer.aspx");
@@ -44,6 +44,6 @@ public partial class _1_DataEntry : System.Web.UI.Page
         aStock.Avalible = chkAvailable.Text;
         Session["aStock"] = aStock;
         Response.Redirect("RoryViewer.aspx");
-
+        */
     }
 }
